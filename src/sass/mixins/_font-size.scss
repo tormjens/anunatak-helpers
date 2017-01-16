@@ -1,0 +1,10 @@
+/*
+ * Font Mixin
+ *
+ * Generates font size and line height based on user input
+ */
+@mixin font($fontsize: 16, $lineheight: 24, $basefontsize: 16) {
+	font-size: $fontsize + px;
+	font-size: ($fontsize / $basefontsize) + rem;
+	line-height: ($lineheight / $fontsize);
+}

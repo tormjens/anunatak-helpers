@@ -1,0 +1,8 @@
+{
+  "name": "anunatak-helpers",
+  "version": "1.0.0",
+  "description": "Theme helpers for Anunatak",
+  "main": "src/sass/anunatheme.scss",
+  "author": "Tor Morten Jensen <tormorten@anunatak.no>",
+  "license": "MIT"
+}

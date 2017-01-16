@@ -1,0 +1,11 @@
+/*
+ * HTML5 Placeholder Mixin
+ *
+ * Replace the default placeholder styles
+ */
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}
+}

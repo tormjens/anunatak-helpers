@@ -1,0 +1,24 @@
+/*
+ * Multiple Breakpoints Mixin
+ *
+ * Uses foundations breakpoint mixin to process the mixins
+ */
+@mixin bp($breakpoints...) {
+
+	@each $bp in $breakpoints {
+		$index: str-index($bp, '+');
+		@if($index) {
+			$variation: str-slice($bp, 1, $index - 1);
+			$bp: str-slice($bp, $index + 1);
+			@include breakpoint($bp) {
+				@include breakpoint($variation) {
+					@content;
+				}
+			}
+		} @else {
+			@include breakpoint($bp) {
+				@content;
+			}
+		}
+	}
+}
